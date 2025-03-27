@@ -2,12 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #f5f5f5;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif; 
+    font-weight: 600; 
+    letter-spacing: 1px; 
+    background-color: #fff;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Dela Gothic One', sans-serif;
+    letter-spacing: 2px;
+    font-size: 45px;;
+    margin-bottom: 10px;
+}
+
 
 ::selection {
     color: #fff;
@@ -20,45 +30,39 @@ body {
     scroll-margin-top: 20px;
 }
 
-/* Адаптивность для маленьких экранов */
 @media (max-width: 768px) {
     .company-info__container {
-        flex-direction: column; /* Столбец на маленьких экранах */
+        flex-direction: column;
         text-align: center;
     }
 
     .company-info__logo {
-        flex-direction: column; /* Логотип и название в столбец */
+        flex-direction: column;
         gap: 10px;
     }
 
     .services-grid {
-        grid-template-columns: 1fr; /* 1 столбец на мобильных */
-        grid-template-rows: repeat(8, auto); /* 8 строк (по 2 на каждый элемент) */
+        grid-template-columns: 1fr; 
+        grid-template-rows: repeat(8, auto);
     }
 
-    /* Переопределяем порядок элементов для корректного отображения */
-    .services-grid > div:nth-child(1) { grid-row: 1; grid-column: 1; } /* Текст 1 */
-    .services-grid > div:nth-child(2) { grid-row: 2; grid-column: 1; } /* Placeholder 1 */
-    .services-grid > div:nth-child(3) { grid-row: 4; grid-column: 1; } /* Placeholder 2 */
-    .services-grid > div:nth-child(4) { grid-row: 3; grid-column: 1; } /* Текст 2 */
-    .services-grid > div:nth-child(5) { grid-row: 5; grid-column: 1; } /* Текст 3 */
-    .services-grid > div:nth-child(6) { grid-row: 6; grid-column: 1; } /* Placeholder 3 */
-    .services-grid > div:nth-child(7) { grid-row: 8; grid-column: 1; } /* Placeholder 4 */
-    .services-grid > div:nth-child(8) { grid-row: 7; grid-column: 1; } /* Текст 4 */
+    .services-grid > div:nth-child(1) { grid-row: 1; grid-column: 1; } 
+    .services-grid > div:nth-child(2) { grid-row: 2; grid-column: 1; } 
+    .services-grid > div:nth-child(3) { grid-row: 4; grid-column: 1; } 
+    .services-grid > div:nth-child(4) { grid-row: 3; grid-column: 1; } 
+    .services-grid > div:nth-child(5) { grid-row: 5; grid-column: 1; } 
+    .services-grid > div:nth-child(6) { grid-row: 6; grid-column: 1; } 
+    .services-grid > div:nth-child(7) { grid-row: 8; grid-column: 1; } 
+    .services-grid > div:nth-child(8) { grid-row: 7; grid-column: 1; } 
 
     .service-text {
-        text-align: center; /* Центрирование текста */
+        text-align: center; 
     }
 
     .image-placeholder {
-        height: 200px; /* Увеличенная высота на мобильных */
+        height: 200px; 
     }
 }
-
-
-
-
 
 /* Header */
 .header {
@@ -84,6 +88,7 @@ body {
 .company-info {
     background-color: #fff;
     padding: 40px;
+    padding-top: 0;
 }
 
 .company-info__container {
@@ -110,7 +115,8 @@ body {
 
 
 .company-info__logo h1 {
-    color: #ff69b4;
+    font-family: 'Dela Gothic One';
+    color: #FF90D6;
     font-size: 36px;
     margin: 0; 
     line-height: 1.2;
@@ -119,6 +125,7 @@ body {
 }
 
 .company-info__logo h1 span {
+    font-family: 'Dela Gothic One';
     display:block;
 }
 
@@ -131,7 +138,7 @@ body {
     font-size: 20px;
     line-height: 1.6;
     margin-bottom: 20px;
-    color: #333; 
+    color: #000; 
 }
 
 /* Блок с позициями услуг "Работаем круглосуточно"-----------------------------------------------------------------------------------------------------*/
@@ -141,19 +148,21 @@ body {
     padding: 40px;
     text-align: center;
     vertical-align: bottom;
+    text-transform: uppercase;
 }
 
 .services h2 {
-    color: #ff69b4;
-    font-size: 28px;
+    color: #3A3845;
+
     margin-bottom: 10px;
 }
 
 .services > p {
-    font-size: 14px bold;
-    display:inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
     vertical-align: middle;
-    background-color:#87ceeb; 
+    background-color: #87ceeb; 
     color: #fff;
     padding: 3px;
     margin-bottom: 25px;
@@ -162,9 +171,9 @@ body {
 .services-grid {
     display: grid;
     grid-template-columns: 1fr 1fr; 
-    grid-template-rows: repeat(4, auto); 
+    grid-template-rows: repeat(4, 300px); 
     max-width: 1000px; 
-    height: 1100px;
+    height: auto; 
     margin: 0 auto; 
     border-radius: 15px; 
     overflow: hidden; 
@@ -186,27 +195,23 @@ body {
 }
 
 .service-text h3 {
-    font-size: 18px;
+    font-family: 'Dela Gothic One';
+    font-size: 22px;
     margin-bottom: 10px;
-    color: #fff; 
+    color: #252525; 
 }
 
 .service-text p {
-    font-size: 14px;
-    color: #fff;
+    font-size: 15px;
+    color: #595667;
 }
 
 .service-image {
-    display: flex;
-    align-items: center; /* Центрирование placeholder'а */
-    justify-content: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.image-placeholder {
-    background-color: #d3d3d3; /* Серый цвет, как в других placeholder'ах */
-    width: 100%;
-    height: 100%; /* Фиксированная высота */
-}
 
 /* Блок с информационными карточками "Специальные предложения" ------------------------------------------------------------------------------------*/
 
@@ -218,110 +223,213 @@ body {
 
 .special-offers h2 {
     color: #ff69b4;
-    font-size: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .offers-grid {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    max-width: 800px;
+    flex-direction: column;
+    max-width: 800px; 
     margin: 0 auto;
 }
 
 .offer-card {
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
+    display: flex;
+    align-items:center;
+    justify-content:start;
+    padding: 10px;
+    gap: 130px;
     text-align: left;
-    color: #fff;
 }
 
-.offer-card.blue {
-    background-color: #87ceeb;
+.offer-icon {
+    width: 15%;
 }
 
-.offer-card.pink {
-    background-color: #FFB6E4;
+.offer-text h3 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #252525; 
+    margin-bottom: 5px;
+    text-transform: uppercase;
 }
 
-.offer-card h3 {
+.offer-text p {
     font-size: 18px;
-    margin-bottom: 10px;
+    color: #595667;
+    padding: 10px;
 }
 
-.offer-card p {
-    font-size: 14px;
-}
 
-/* Блок с товарами "Популярные товары" ---------------------------------------------------------------------------------------------------*/
-
+/* Блок с товарами "Популярные товары" */
 .popular-products {
     background-color: #fff;
-    padding: 40px;
     text-align: center;
 }
 
 .popular-products h2 {
-    color: #ff69b4;
-    font-size: 28px;
-    margin-bottom: 50px;
+    color: #3A3845;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Адаптивная сетка */
-    gap: 20px; /* Расстояние между карточками */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px; 
     max-width: 1000px;
-    margin: 0 auto; /* Центрирование сетки */
+    margin: 0 auto;
 }
 
 .product-card {
     display: flex;
-    flex-direction: column; /* Вертикальное расположение элементов */
-    align-items: center; /* Центрирование содержимого */
-    justify-content: space-between; /* Равномерное распределение пространства */
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: space-between;
+    cursor: pointer; /* Курсор указывает, что карточка кликабельна */
+    transition: transform 0.3s ease; /* Плавный эффект при наведении */
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Лёгкое увеличение при наведении */
 }
 
 .product-placeholder {
     background-color: #d3d3d3;
-    width: 200px; /* Занимает всю ширину карточки */
-    height: 200px; /* Фиксированная высота для квадрата */
+    width: 200px; 
+    height: 200px; 
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
-
-.product-image {            /* Класс для будущих изображений */
+.product-image {
     width: 100%;
     height: 200px;
-    object-fit: cover; /* Для корректного отображения реальных изображений */
+    object-fit: cover;
     border-radius: 10px;
     margin-bottom: 10px;
-    display: none; /* Скрыт по умолчанию, активируется при добавлении изображений */
+    display: none; 
 }
 
 .product-card p {
     font-size: 14px;
     text-align: center;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
 }
 
+/* Стили для модального окна */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #3A3845;
+}
+
+.modal-body {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.modal-image .product-placeholder {
+    width: 300px;
+    height: 300px;
+    background-color: #d3d3d3;
+    border-radius: 10px;
+}
+
+.modal-details {
+    flex: 1;
+}
+
+.modal-details h3 {
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 24px;
+    color: #3A3845;
+    margin-bottom: 10px;
+}
+
+.modal-details p {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 16px;
+    color: #595667;
+    margin-bottom: 20px;
+}
+
+.modal-price {
+    margin-bottom: 20px;
+}
+
+.old-price {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 16px;
+    color: #595667;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.new-price {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 20px;
+    color: #3A3845;
+    font-weight: 700;
+}
+
+.add-to-cart {
+    background-color: #87ceeb;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-family: 'Dela Gothic One', sans-serif;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #6bbde0;
+}
 
 /* Форма обратной связи ---------------------------------------------------------------------------------------------------------------------*/
 .flex-container {
     display: flex;
-    justify-content: center; /* Центрирование формы по горизонтали */
-    align-items: center; /* Центрирование формы по вертикали */
-    background-color: #fff; /* Фон совпадает с "Популярные товары" */
-    padding: 40px; /* Единый отступ, как в других секциях */
+    justify-content: center;
+    align-items: center; 
+    background-color: #fff; 
+    padding: 40px; 
 }
 
 .contact-form {
     padding: 40px;
     text-align: center;
     border-radius: 15px;
-    background: linear-gradient(to right, #ff69b4, #87ceeb); /* Сохраняем градиент внутри формы */
+    background: #FF90D6; 
 }
 
 .contact-form h2 {
@@ -345,16 +453,37 @@ body {
     border: none;
     border-radius: 5px;
     font-size: 16px;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif; /* Добавляем шрифт для самого поля */
+}
+
+.contact-form input::placeholder {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    color: #000; 
+    font-size: 16px;
+    opacity: 0.7; /* Лёгкая прозрачность для placeholder */
 }
 
 .contact-form button {
-    background-color: #ff69b4;
+    background-color: #87ceeb;
     color: #fff;
     padding: 10px 20px;
-    border-radius: 5px;
-    border: 3px solid;
+    border-radius: 25px;
     font-size: 16px;
+    font-family: 'Dela Gothic One', sans-serif;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #6bbde0;
+}
+
+.contact-form button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .contact-form textarea {
@@ -364,7 +493,16 @@ body {
     border-radius: 5px;
     font-size: 16px;
     resize: vertical;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
 }
+
+.contact-form textarea::placeholder {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    color: #000;
+    font-size: 16px;
+    opacity: 0.7;
+}
+
 
 
 /* Блок с интерактивной картой ------------------------------------------------------------------------------------------------------------------------*/
@@ -372,8 +510,20 @@ body {
     background: linear-gradient(to right, #ff69b4, #87ceeb);
     padding: 40px; 
     display: flex;
-    flex: 0 0 auto;
-    justify-content:center;
+    flex-direction: column; /* Элементы располагаются вертикально */
+    align-items: center; /* Центрируем по горизонтали */
+    gap: 20px; /* Расстояние между контактами и картой */
+}
+
+.map-contact {
+    text-align: center;
+    color: #fff; /* Белый цвет текста для контраста с фоном */
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 16px;
+}
+
+.map-contact p {
+    margin-bottom: 10px;
 }
 
 .map {
@@ -381,38 +531,94 @@ body {
     width: 50%;
     border-radius: 10px;
     border: 5px solid;
-    border-color:#fff
+    border-color: #fff;
 }
 
-/* Footer */
+
+/* Footer ----------------------------------------------------------------------------------------------------------------*/
+
 .footer {
     background-color: #ff69b4;
     color: #fff;
     padding: 40px;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column; /* Теперь футер — колонка, чтобы .footer-legal был снизу */
+    gap: 20px;
+    text-align: left;
+}
+
+.footer-columns {
+    display: flex;
+    flex-direction: row; /* Колонки внутри располагаются горизонтально */
+    justify-content: space-between;
+    flex-wrap: wrap; /* Если экран узкий, колонки переносятся */
+    gap: 20px;
+    width: 100%; /* Занимает всю ширину */
+}
+
+.footer-left {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 
-.footer-contact p {
-    margin-bottom: 10px;
+.footer-right {
+    flex: 1;
+    max-width: 300px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .footer-info h3 {
+    font-family: 'Dela Gothic One', sans-serif;
     font-size: 20px;
     margin-bottom: 10px;
 }
 
+.footer-description {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+
 .footer-links ul {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
 }
 
 .footer-links ul li {
-    margin-bottom: 10px;
+    margin-bottom: 0;
 }
 
 .footer-links ul li a {
     color: #fff;
     text-decoration: none;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 16px;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-legal {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 12px;
+    width: 100%; /* Растягиваем на всю ширину */
+    text-align: center; /* Центрируем текст */
+    margin-top: 20px; /* Отступ сверху для разделения */
+}
+
+.footer-legal a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-legal a:hover {
+    text-decoration: underline;
 }
